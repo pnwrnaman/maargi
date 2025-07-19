@@ -1,0 +1,17 @@
+// build.gradle (Project: YourProjectName)
+
+buildscript {
+    ext {
+        agpVersion = '8.2.0' // Define it here
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:${agpVersion}" // Now it can be used
+        // ... other classpath dependencies
+    }
+}
+
+// ... rest of your build.gradle file

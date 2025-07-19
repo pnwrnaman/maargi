@@ -1,0 +1,13 @@
+// build.gradle (Project: YourProjectName)
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Here agpVersion would be used
+        classpath "com.android.tools.build:gradle:$agpVersion"
+        // ... other classpath dependencies
+    }
+}
+// ...

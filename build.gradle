@@ -1,0 +1,35 @@
+// /Users/namanpanwar/Maargi/android/build.gradle.kts
+
+// Versions (kotlinVersion, agpVersion) are now defined in gradle.properties
+// and are automatically available as project properties.
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Access properties from gradle.properties.
+        // Gradle makes them available; ensure you cast to String if needed,
+        // though direct string interpolation often works for versions.
+        classpath("com.android.tools.build:gradle:${project.property("agpVersion") as String}")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${project.property("kotlinVersion") as String}")
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = file("../build")
+subprojects {
+    project.buildDir = File(rootProject.buildDir, project.name)
+}
+
+tasks.register < Delete > ("clean") {
+    delete(rootProject.buildDir)
+}
+

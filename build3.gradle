@@ -1,0 +1,22 @@
+// build.gradle (Project: YourProjectName)
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Here, agpVersion is read from gradle.properties or ext block
+        classpath "com.android.tools.build:gradle:${agpVersion}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0" // Example Kotlin plugin
+    }
+}
+
+plugins {
+    // For newer projects, you might define it here if using the plugins {} block directly
+    // id 'com.android.application' version '8.2.0' apply false
+    // id 'com.android.library' version '8.2.0' apply false
+    // id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
+}
+
+// ...

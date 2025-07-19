@@ -1,0 +1,14 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    // agpVersion would be defined in gradle.properties or in an ext block above
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$agpVersion" // Here's where it's often used
+        // Other classpath dependencies
+    }
+}
+
+// ... rest of your build.gradle file
