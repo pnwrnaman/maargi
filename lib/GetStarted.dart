@@ -16,7 +16,6 @@ class _GetStartedPageState extends State<GetStartedPage> {
     return Scaffold(
       body: Stack(
         children: [
-          // Full-screen image from assets
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -26,7 +25,6 @@ class _GetStartedPageState extends State<GetStartedPage> {
             ),
             child: Stack(
               children: [
-                // Blurred bottom part
                 Positioned(
                   bottom: 0,
                   left: 0,
